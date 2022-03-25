@@ -104,3 +104,68 @@ function findLongestWordLength(str) {
   }
 
   findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+  //   Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
+
+// Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
+
+function largestOfFour(arr) {
+    // Create a variable to store the results as an array.
+    let results = [];
+
+    // Create an outer loop to iterate through the outer array.
+    for (let i = 0; i < arr.length; i++) {
+        // Create a second variable to hold the largest number and initialise it with the first number. 
+        // This must be outside an inner loop so it won’t be reassigned until we find a larger number.
+      let largestNumber = arr[i][0];
+
+    //   Create said inner loop to work with the sub-arrays.
+      for (let j = 1; j < arr[i].length; j++) {
+        // Check if the element of the sub array is larger than the currently stored largest number. 
+        // If so, then update the number in the variable.
+        if (arr[i][j] > largestNumber) {
+          largestNumber = arr[i][j];
+        }
+      }
+    //   After the inner loop, save the largest number in the corresponding position inside of the results array.
+      results[i] = largestNumber;
+    }
+
+    // Iteration in the first array
+    // For each iteration: arr[i][j]           results[i]          if arr[i][j] > largestNumber[i]?     then largestNumber[i] = arr[i][j]
+    // First iteration:    arr[0][0] => 4      results[0] => 0     4 > 0? => TRUE                       then largestNumber[0] = 4
+    // Second iteration:   arr[0][1] => 5      results[0] => 4     5 > 4? => TRUE                       then largestNumber[0] = 5
+    // Third iteration:    arr[0][2] => 1      results[0] => 5     1 > 5? => FALSE                      then largestNumber[0] = 5
+    // Fourth iteration:   arr[0][3] => 3      results[0] => 5     3 > 5? => FALSE                      then largestNumber[0] = 5
+    // Fifth iteration:    arr[0][4] => FALSE  results[0] => 5  
+    // Exit the first array and continue on the second one
+    //    Iteration in the second array
+    //       For each iteration: arr[i][j]            largestNumber[i]           if arr[i][j] > largestNumber[i]?     then largestNumber[i] = arr[i][j]
+    //       First iteration:    arr[1][0] => 13      largestNumber[1] => 0      13 > 0? => TRUE                      then largestNumber[1] = 13
+    //       Second iteration:   arr[1][1] => 27      largestNumber[1] => 13     27 > 13? => TRUE                     then largestNumber[1] = 27
+    //       Third iteration:    arr[1][2] => 18      largestNumber[1] => 27     18 > 27? => FALSE                    then largestNumber[1] = 27
+    //       Fourth iteration:   arr[1][3] => 26      largestNumber[1] => 27     26 > 27? => FALSE                    then largestNumber[1] = 27
+    //       Fifth iteration:    arr[1][4] => FALSE   largestNumber[1] => 27                                          largestNumber = [5,27,0,0]
+    //    Exit the first array and continue on the third one
+    //    Iteration in the third array
+    //       For each iteration: arr[i][j]            largestNumber[i]           if arr[i][j] > largestNumber[i]?     then largestNumber[i] = arr[i][j]
+    //       First iteration:    arr[2][0] => 32      largestNumber[2] => 0      32 > 0? => TRUE                      then largestNumber[2] = 32
+    //       Second iteration:   arr[2][1] => 35      largestNumber[2] => 32     35 > 32? => TRUE                     then largestNumber[2] = 35
+    //       Third iteration:    arr[2][2] => 37      largestNumber[2] => 35     37 > 35? => TRUE                     then largestNumber[2] = 37
+    //       Fourth iteration:   arr[2][3] => 39      largestNumber[2] => 37     39 > 37? => TRUE                     then largestNumber[2] = 39
+    //       Fifth iteration:    arr[2][4] => FALSE   largestNumber[2] => 39                                          largestNumber = [5,27,39,0]
+    //    Exit the first array and continue on the fourth one
+    //    Iteration in the fourth array
+    //       For each iteration: arr[i][j]            largestNumber[i]           if arr[i][j] > largestNumber[i]?     then largestNumber[i] = arr[i][j]
+    //       First iteration:    arr[3][0] => 1000    largestNumber[3] => 0      1000 > 0? => TRUE                    then largestNumber[3] = 1000
+    //       Second iteration:   arr[3][1] => 1001    largestNumber[3] => 1000   1001 > 1000? => TRUE                 then largestNumber[3] = 1001
+    //       Third iteration:    arr[3][2] => 857     largestNumber[3] => 1001   857 > 1001? => FALSE                 then largestNumber[3] = 1001
+    //       Fourth iteration:   arr[3][3] => 1       largestNumber[3] => 1001   1 > 1001? => FALSE                   then largestNumber[3] = 1001
+    //       Fifth iteration:    arr[3][4] => FALSE   largestNumber[3] => 1001                                        largestNumber = [5,27,39,1001]
+    //    Exit the FOR loop 
+    
+    // And finally return said array.
+    return results;
+  }
+
+  largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
