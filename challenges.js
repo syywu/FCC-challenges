@@ -211,7 +211,7 @@ function confirmEnding(str, target) {
       }
       
       repeatStringNumTimes("abc", 3);
-      
+
 // Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
 
     // We start off with a simple if statement to determine one of two outcomes…
@@ -226,3 +226,21 @@ function confirmEnding(str, target) {
       }
       
       truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+      // Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+
+    function findElement(arr, func) {
+        let num = 0;
+        
+        // Challenge asks us to look through array. This is done using a for loop. 
+        for (let i = 0; i < arr.length; i++) {
+          // The num variable is being passed into the function, so we set it to each index in our array.
+          num = arr[i];
+          // The pre-defined function already checks each number for us, so if it is “true”, we return that num.
+          if (func(num)) {
+            return num;
+          }
+        }
+        // If none of the numbers in the array pass the function’s test, we return undefined.
+        return undefined;
+      }
