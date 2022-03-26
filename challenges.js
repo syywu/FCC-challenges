@@ -243,4 +243,7 @@ function confirmEnding(str, target) {
         }
         // If none of the numbers in the array pass the function’s test, we return undefined.
         return undefined;
+    
       }
+
+      findElement([1, 2, 3, 4], num => num % 2 === 0);
