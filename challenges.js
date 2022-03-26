@@ -186,3 +186,28 @@ function confirmEnding(str, target) {
     }
     
     confirmEnding("Bastian", "n");
+
+    // Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.
+
+    function repeatStringNumTimes(str, num) {
+
+        // Create an empty string variable to store the repeated word.
+        let repeatedStr = "";
+  
+        // Use a for loop or for loop to repeat code as many times as needed according to num
+        for(let i =0; i < num; i++){
+            //  Then we add the string to the variable created on step one inside of the loop.
+            repeatedStr += str ; 
+      }
+  
+      /*  repeatedString += string      repeatedString 
+           "" + "abc"                  "abc"   
+          "abc" + "abc"               "abcabc"     
+          "abcabc" + "abc"            "abcabcabc" 
+      */
+      
+      // At the end of the loop, return the variable for the repeated word.
+      return repeatedStr;
+      }
+      
+      repeatStringNumTimes("abc", 3);
