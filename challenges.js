@@ -169,3 +169,20 @@ function largestOfFour(arr) {
   }
 
   largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+  //   Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+function confirmEnding(str, target) {
+  
+    // First we use the slice method copy the string.
+    // In order to get the last characters in str equivalent to the target's length we use the slice method.
+    
+    // The first parameter inside the slice method is the starting index and the second parameter would be the ending index.
+    // In this case we only include one parameter which it will copy everything from the starting index.
+    return str.slice(str.length - target.length) === target;
+
+    // We substract the length of str and the length of target, that way, we shall get the last remaining characters equivalent to the target's length.
+    // Finally we compare the return result of slice to target and check if they have the same characters.
+    }
+    
+    confirmEnding("Bastian", "n");
