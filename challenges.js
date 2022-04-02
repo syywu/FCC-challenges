@@ -250,12 +250,34 @@ function confirmEnding(str, target) {
 
       /* 
       Sum All Numbers in a Range
-      
+
       We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. The lowest number will not always come first.
 
       For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10.
     
       */
+
+      function sumAll(arr) {
+
+        //sort the arr- from low to high
+        arr.sort((a, b) => {
+          return a-b; 
+        });
+        // initialise a var called result to store result
+        let result = 0; 
+
+        // i is 1st index of arr. loop runs as long as it's less than or equal to index 2
+        for(let i = arr[0]; i <= arr[1]; i++){
+          result += i; 
+          //result = 0 + 1 = 1
+          //result = 1 + 2 = 3
+          //result = 3 + 3 = 6
+          //result = 6 + 4 = 10
+        }
+        return result ;
+      }
+      
+      sumAll([1, 4]);
 
       /* 
       Palindrome Checker
