@@ -264,9 +264,12 @@ function confirmEnding(str, target) {
       */
 
       function palindrome(str) {
-        let newStr = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
-        let reverseStr = newStr.split("").reverse().join("");
-        
+        let newStr = str.replace(/[^a-z0-9]/gi, '').toLowerCase(); //notapalindrome
+        let reverseStr = newStr.split("").reverse().join(""); 
+        // [ 'n', 'o', 't', 'a', 'p', 'a', 'l', 'i', 'n', 'd', 'r', 'o', 'm', 'e' ]
+        // [ 'e', 'm', 'o', 'r', 'd', 'n', 'i', 'l', 'a', 'p', 'a', 't', 'o', 'n' ]
+        // emordnilapaton
+
         if(newStr != reverseStr){
           return false; 
         }
