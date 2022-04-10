@@ -410,3 +410,22 @@ Copy each element of the first array into the second array, in order.
 Begin inserting elements at index n of the second array.
 
 Return the resulting array. The input arrays should remain the same after the function runs. */
+
+function frankenSplice(arr1, arr2, n) {
+  // Our goal is to take all of the elements from arr1 and insert them into arr2 starting with index position n. At the same time we must ensure that neither arr or arr2 have been mutated.
+
+  let newArr = arr2.slice(0);
+  // Using the slice() function we can create an exact replica of arr2 and assign the result of the operation to a variable, newArr.
+
+  for(let i = 0; i < arr1.length; i++){
+    newArr.splice(n, 0, arr1[i]);
+    // Now that we have an array that we can mutate on, we can iterate through every item in the first array. For each item in the first array we can use the splice() function to insert the item into index n of newArr.
+    // n- start position, 0- removes 0 elements, arr[i]-  element added
+    n++;
+    // We increment the index n by one. This will ensure that every item from the arr1 is inserted into newArr in the proper index position.
+  }
+  // Finally, we return the newArr and end the function.
+  return newArr;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
