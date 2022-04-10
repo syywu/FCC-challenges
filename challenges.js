@@ -340,3 +340,25 @@ function confirmEnding(str, target) {
 // Check if a value is classified as a boolean primitive. Return true or false.
 
 // Boolean primitives are true and false.
+
+function booWho(bool) {
+  if (typeof(bool) === "boolean"){
+    return true;
+  }
+  return false;
+  }
+  
+  booWho(null);
+
+  // Uses the operator typeof to check if the variable is a boolean. If it is, it will return true. Otherwise, if it is any other type it will return false.
+
+  function booWho(bool) {
+    return typeof bool === "boolean";
+  }
+  
+  // test here
+  booWho(null);
+
+// Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+// For the purpose of this exercise, you should also capitalize connecting words like the and of.
