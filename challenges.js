@@ -105,7 +105,7 @@ function findLongestWordLength(str) {
 
   findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
-  //   Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
+ //   Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
 
 // Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
 
@@ -170,7 +170,7 @@ function largestOfFour(arr) {
 
   largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
-  //   Check if a string (first argument, str) ends with the given target string (second argument, target).
+//   Check if a string (first argument, str) ends with the given target string (second argument, target).
 
 function confirmEnding(str, target) {
   
@@ -187,7 +187,7 @@ function confirmEnding(str, target) {
     
     confirmEnding("Bastian", "n");
 
-    // Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.
+// Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.
 
     function repeatStringNumTimes(str, num) {
 
@@ -336,3 +336,7 @@ function confirmEnding(str, target) {
         }
         
         palindrome("not a palindrome");
+                
+// Check if a value is classified as a boolean primitive. Return true or false.
+
+// Boolean primitives are true and false.
