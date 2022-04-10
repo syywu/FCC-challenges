@@ -435,3 +435,21 @@ frankenSplice([1, 2, 3], [4, 5, 6], 1);
 // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
 
 // Hint: Try converting each value to a Boolean.
+
+function bouncer(arr) {
+
+  // We create a new empty array.
+  let newArr = [];
+
+  // We use a for loop to iterate over all elements of the provided array (arr).
+  for(let i =0; i<arr.length; i++){
+    // We use the if statement to check if the current element is truthy or falsy
+  if(arr[i]) newArr.push(arr[i]);
+  // If the element is truthy, we push it to the new array (newArray). This result in the new array (newArray) containing only truthy elements.
+  }
+
+  // We return the new array (newArray).
+    return newArr;
+  }
+  
+  bouncer([7, "ate", "", false, 9]);
