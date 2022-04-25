@@ -477,3 +477,13 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([40, 60], 50);
+
+/* The sort() method iterates over the array, every time passing 2 values next to each other to the compare function. The compare function then evaluates the difference between the first value and the second. This is what will determine whether the function returns a positive, negative or neutral value.
+
+If the return value is positive, it means that the first value is greater than the second. For example, if you compare 7 and 4, you get 3. Therefore, the first value goes after the second one in our ascending order.
+
+If the return value is negative, it means that the first value is less than the second. For example, if you compare 2 and 7, you get -5. Therefore, the first value goes before the second one in our ascending order.
+
+A neutral value, or zero, indicates that the two values are equal, so the order does not need to change.
+
+You can actually do any operation you want inside the compare function, as long as you return a value. To sort a descending order would be +. */
