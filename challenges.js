@@ -498,16 +498,19 @@ The arguments ["hello", "hey"] should return false because the string hello does
 
 Lastly, ["Alien", "line"], should return true because all of the letters in line are present in Alien. */
 
+function mutation(arr) {
+
+  // First we make the two strings in the array lowercase. elem1 will hold what we are looking for in elem.
 let elem = arr[0].toLowerCase();
-              let elem1= arr[1].toLowerCase();
+let elem1= arr[1].toLowerCase();
 
-              // Then we loop through our test characters and if any of them is not found we return false.
-              for(let i= 0; i < elem1.length; i++){
-                if(elem.indexOf(elem1[i]) < 0) return false;
-              }
+// Then we loop through our test characters and if any of them is not found we return false.
+for(let i= 0; i < elem1.length; i++){
+if(elem.indexOf(elem1[i]) < 0) return false;
+}
 
-              // If they are all found, the loop will finish without returning anything and we get to return true.
-              return true;
-            }
+// If they are all found, the loop will finish without returning anything and we get to return true.
+return true;
+}
             
-            mutation(["hello", "hey"]);
+mutation(["hello", "hey"]);
