@@ -7,3 +7,10 @@ The arguments ["hello", "hey"] should return false because the string hello does
 
 Lastly, ["Alien", "line"], should return true because all of the letters in line are present in Alien.
 */
+
+function mutation(arr) {
+  for (let i = 0; i < arr[1].length; i++) {
+    if (!arr[0].toLowerCase().includes(arr[1][i].toLowerCase())) return false;
+  }
+  return true;
+}
